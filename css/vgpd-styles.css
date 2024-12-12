@@ -1,0 +1,32 @@
+.single-product div.product .woocommerce-product-gallery .flex-viewport {
+    width: 80%;
+}
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+    width: 20%;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.single-product div.product .woocommerce-product-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+    width: 100% !important;
+    margin: 0 0 0px 0 !important;
+    margin-block-end: 0em !important;
+    margin-block-start: 0em !important;
+}
+
+.woocommerce div.product div.images.woocommerce-product-gallery.vgpd-left {
+    flex-direction: row-reverse;
+}
