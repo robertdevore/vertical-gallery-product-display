@@ -52,6 +52,21 @@ use RobertDevore\WPComCheck\WPComPluginHandler;
 new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://robertdevore.com/why-this-plugin-doesnt-support-wordpress-com-hosting/' );
 
 /**
+ * Load plugin text domain for translations
+ * 
+ * @since 1.0.1
+ * @return void
+ */
+function vgpd_load_textdomain() {
+    load_plugin_textdomain( 
+        'vertical-gallery-woocommerce', 
+        false, 
+        dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+    );
+}
+add_action( 'plugins_loaded', 'vgpd_load_textdomain' );
+
+/**
  * Register the settings page in the WordPress admin menu.
  *
  * @since  1.0.0
