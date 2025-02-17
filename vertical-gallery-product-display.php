@@ -42,6 +42,15 @@ $myUpdateChecker->setBranch( 'main' );
 // Define the plugin version.
 define( 'VGPD_VERSION', '1.0.0' );
 
+// Check if Composer's autoloader is already registered globally.
+if ( ! class_exists( 'RobertDevore\WPComCheck\WPComPluginHandler' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
+use RobertDevore\WPComCheck\WPComPluginHandler;
+
+new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://robertdevore.com/why-this-plugin-doesnt-support-wordpress-com-hosting/' );
+
 /**
  * Register the settings page in the WordPress admin menu.
  *
